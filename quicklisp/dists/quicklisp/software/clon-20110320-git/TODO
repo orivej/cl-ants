@@ -1,0 +1,11 @@
+# -*- mode: org -*-
+#+TODO: MAYBE(m@) LOG(l@) DEFERRED(f@)
+#+SEQ_TODO: TODO(t@) NEXT(n@) STARTED(s@) WAITING(w@) | DONE(d@) CANCELLED(c@)
+#+STARTUP: hidestars
+* DONE make it portable
+  CLOSED: [2008-12-12 Fri 10:39]
+  Use trivial-timers and bordeaux-threads. Patch by Clinton Ebadi
+  <clinton@unknownlamer.org>.
+* to support time zones we need better time handling than what
+   available in pure Common Lisp.
+* maybe a cron syntax converter: "0-30" => (integer 0 30)

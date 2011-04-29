@@ -1,0 +1,8 @@
+Trivial Timers -- Portable timers for Common Lisp
+
+This exports the SBCL Timer interface and not much else. The portable
+implementation requires a Bordeaux threads snapshot from at least
+December 2008.
+
+The portable implementation is based upon the SBCL implementation and
+as such remains in the public domain.

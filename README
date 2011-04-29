@@ -1,0 +1,10 @@
+This is an Ai Challenge: Ants Common Lisp bot starter kit.
+See also:
+- https://github.com/aichallenge/aichallenge/wiki/Ants
+- https://github.com/aerique/google-ai-challenge-2011-1-ants
+
+This kit does a little work to be self-contained.
+Example usage:
+$ rlwrap sbcl --no-sysinit --no-userinit
+* (load "setup")
+* (require 'ants-bot)
