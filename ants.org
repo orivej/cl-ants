@@ -1,0 +1,53 @@
+Given: an input-output text protocol.
+Needed: win the challenge.
+The goal of writing the bot is to mediate the given and the needed.
+The challenge arises from them being defined in different terms.
+Each of them allow for a little formal advance towards the other.
+
+* goal: win the challenge
+** outscore others (score best) in each game more often than they do
+*** strive for the maximum score in each game (regardless of scores of others)
+**** spawn more (+1 for each spawn)
+**** kill more
+*** strive for minimum scores by others
+**** die less
+**** prevent others from spawning
+*** bonus: eliminate other bots
+
+
+* strategies
+** dissipate much
+** attack in brigades
+*** dissipate in the time of peace
+
+
+* given: I/O protocol
+** initialization/preamble
+*** read and process parameters
+**** read parameters until read:"ready"
+***** read:"type value"+
+types and values are:
+
+- "loadtime"       :: in milliseconds
+- "turntime"       :: in milliseconds
+- "rows"           :: number of rows in the map
+- "cols"           :: number of columns in the map
+- "turns"          :: maximum number of turns in the game
+- "viewradius2"    :: view radius squared
+- "attackradius2"  :: battle radius squared
+- "spawnradius2"   :: spawn radius squared
+**** write:"go"
+** game loop
+*** loop until read:"end"
+**** read:"turn turnNo"
+**** read:"type row col [owner]"+
+- f row col       :: food square
+- r row col       :: previously seen food no longer at location
+- w row col       :: water square
+- a row col owner :: live ant square
+- d row col owner :: dead ant
+**** read:"go"
+**** process
+**** write:"o row col direction"+
+Grid indexes start from zero and directions are to be passed as either 'N', 'E', 'S' or 'W'.
+**** write:"go"

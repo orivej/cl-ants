@@ -8,3 +8,10 @@ Example usage:
 $ rlwrap sbcl --no-sysinit --no-userinit
 * (load "setup")
 * (require 'ants-bot)
+
+
+* * *
+
+
+At this stage I try to keep things as formal as possible.  Nothing is
+done without a particular goal in a single hierarchy of goals.
